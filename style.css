@@ -116,3 +116,14 @@ p {
     margin: 0 20px;
   }
 }
+
+.btn-primary {
+  display: block;
+  margin: 0 auto;
+  background: var(--primary-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
