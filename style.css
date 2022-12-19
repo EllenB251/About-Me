@@ -2,10 +2,24 @@
   --primary-color: #6c63ff;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
 }
 
 body {
   margin: 100px 0;
+  font-family: var(--default-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
 }
 
 h1,
@@ -16,6 +30,7 @@ h3 {
 
 h1 {
   font-size: 96px;
+  line-height: 1.5;
 }
 
 h2 {
@@ -29,11 +44,32 @@ h3 {
 
 p {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.homepage {
+  margin-top: 10px;
 }
 
 .hero {
-  background-color: var(--secondary-color);
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.hero p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #272142;
+}
+
+.hero h2 {
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 24px;
 }
 
 .navigation-links {
@@ -49,6 +85,8 @@ p {
 .primary-link {
   border-radius: 4px;
   padding: 20px 15px;
+  font-size: 18px;
+  line-height: 27px;
   text-decoration: none;
   text-transform: capitalize;
   background: var(--primary-color);
@@ -57,7 +95,9 @@ p {
 }
 
 .primary-link:hover {
-  color: white;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .secondary-link {
@@ -67,6 +107,12 @@ p {
   text-transform: capitalize;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  box-shadow: var(--box-shadow);
+}
+
+.secondary-link:hover {
+  color: var(--secondary-color);
+  background: var(--primary-color);
 }
 
 .homepage-link {
@@ -95,14 +141,14 @@ p {
   text-decoration: underline;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 900px) {
   h1 {
-    font-size: 48px;
-    line-height: 1.5;
+    font-size: 44px;
+    line-height: 56px;
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 44px;
     text-align: center;
   }
 
@@ -115,15 +161,29 @@ p {
     text-align: center;
     margin: 0 20px;
   }
-}
 
-.btn-primary {
-  display: block;
-  margin: 0 auto;
-  background: var(--primary-color);
-  border-radius: 4px;
-  color: white;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 15px 30px;
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .about-section {
+    padding: 0;
+    text-align: center;
+  }
+
+  .project-desciption {
+    padding: 0;
+    text-align: center;
+  }
+
+  .btn-primary {
+    display: block;
+    margin: 0 auto;
+    background: var(--primary-color);
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 15px 30px;
+  }
 }
